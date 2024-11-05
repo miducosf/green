@@ -761,3 +761,152 @@ body::before {
     --emerald-500: #10b981;
     --emerald-600: #059669;
 }
+
+/* Extra small device adjustments (below 418px) */
+@media (max-width: 418px) {
+    /* Profile/Hero section adjustments */
+    .profile-border {
+        @apply w-32 h-32 !important;  /* Smaller profile image */
+        margin: 0 auto 1rem auto;
+    }
+    
+    /* Main heading adjustments */
+    h1, .name-gradient {
+        font-size: 1.75rem !important;  /* Smaller title */
+        line-height: 2rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Subheading adjustments */
+    h2, .section-heading {
+        font-size: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Container padding adjustments */
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Section padding adjustments */
+    section {
+        padding: 2rem 1rem !important;
+    }
+
+    /* Card adjustments */
+    .glass-card {
+        padding: 1rem !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Social buttons adjustments */
+    .social-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    /* Skills and project cards */
+    .skill-card, .project-card {
+        padding: 1rem !important;
+    }
+
+    /* Adjust grid columns for skills/projects */
+    .grid {
+        grid-template-columns: 1fr !important;  /* Single column layout */
+        gap: 1rem !important;
+    }
+
+    /* Tech stack tags */
+    .flex.flex-wrap.gap-2 span {
+        font-size: 0.75rem !important;
+        padding: 0.25rem 0.75rem !important;
+    }
+
+    /* Contact form adjustments */
+    #contact-form input,
+    #contact-form textarea {
+        padding: 0.5rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    /* Button adjustments */
+    .download-btn, .view-project, button[type="submit"] {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    /* Navigation adjustments */
+    .mobile-menu a {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    /* List item spacing */
+    .feature-list li {
+        font-size: 0.875rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Social icons size adjustment */
+    .social-icon-link {
+        font-size: 1.25rem !important;
+    }
+}
+
+/* Even smaller devices (below 360px) */
+@media (max-width: 360px) {
+    /* Further reduce sizes */
+    .profile-border {
+        @apply w-28 h-28 !important;
+    }
+
+    h1, .name-gradient {
+        font-size: 1.5rem !important;
+    }
+
+    h2, .section-heading {
+        font-size: 1.25rem !important;
+    }
+
+    /* Adjust padding */
+    section {
+        padding: 1.5rem 0.75rem !important;
+    }
+
+    .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+
+    /* Smaller buttons */
+    .social-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    /* Adjust tech stack tags */
+    .flex.flex-wrap.gap-2 {
+        gap: 0.25rem !important;
+    }
+
+    .flex.flex-wrap.gap-2 span {
+        font-size: 0.7rem !important;
+        padding: 0.2rem 0.6rem !important;
+    }
+}
+
+/* Ensure smooth transitions */
+.profile-border,
+h1, h2,
+.container,
+section,
+.glass-card,
+.social-button,
+.skill-card,
+.project-card,
+.download-btn,
+.view-project,
+button[type="submit"] {
+    transition: all 0.3s ease-in-out;
+}
