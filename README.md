@@ -103,8 +103,8 @@ The project uses Tailwind's emerald color palette. Main colors:
 
 ## 🔗 Links
 
-- Live Demo: [Your Portfolio URL]
-- GitHub Repository: [Repository URL]
+- Live Demo: [[Click Me](https://neha13singh.github.io/Portfolio/)]
+- GitHub Repository: [[Repository URL](https://github.com/neha13singh/Portfolio.git)]
 
 ## 📄 License
 
