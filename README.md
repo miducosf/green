@@ -2,6 +2,9 @@
 
 A modern, responsive portfolio website built with HTML, Tailwind CSS, and JavaScript.
 
+![Demo](https://github.com/user-attachments/assets/cfa1ab52-2ca2-4320-86ba-2870839da724)
+
+
 ## 🌟 Features
 
 - Responsive design that works on all devices
