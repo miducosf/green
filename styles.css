@@ -724,3 +724,40 @@ a.link-button[target="_blank"]:hover {
         margin-bottom: 1.5rem;
     }
 }
+
+/* Add this at the top of your CSS file */
+body {
+    background-color: #f0fdf4;  /* Lightest emerald shade */
+    /* Alternative ultra-light gradient background */
+    background: linear-gradient(
+        to bottom right,
+        #f0fdf4,  /* Lightest emerald */
+        #ecfdf5,  /* Very light emerald */
+        #f0fdf4   /* Back to lightest emerald */
+    );
+    min-height: 100vh;  /* Ensure gradient covers full viewport height */
+}
+
+/* Optional: Add a subtle pattern overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2310B981' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+    z-index: -1;
+}
+
+/* Add these CSS variables to your :root for consistent theme colors */
+:root {
+    --bg-primary: #f0fdf4;
+    --bg-secondary: #ecfdf5;
+    --emerald-50: #f0fdf4;
+    --emerald-100: #dcfce7;
+    --emerald-200: #bbf7d0;
+    --emerald-500: #10b981;
+    --emerald-600: #059669;
+}
