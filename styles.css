@@ -61,7 +61,7 @@ html {
 
 .skill-card {
     @apply bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .skill-card:hover {
@@ -909,4 +909,180 @@ section,
 .view-project,
 button[type="submit"] {
     transition: all 0.3s ease-in-out;
+}
+
+/* Essential Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0fdf4;
+    min-height: 100vh;
+}
+
+/* Main Page Styles */
+#home {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Profile Styles */
+#home .profile-border {
+    width: 110px !important;
+    height: 110px !important;
+    border: 4px solid #10b981 !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+    margin: 0.5rem auto !important;
+    transition: all 0.3s ease-in-out;
+}
+
+#home .profile-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* Button Styles */
+#home .download-btn {
+    padding: 0.4rem 1rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 9999px !important;
+    background: linear-gradient(to right, #059669, #10B981) !important;
+    color: white !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 418px) {
+    #home .container {
+        padding: 0.75rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    #home .profile-border {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    
+    #home h1 {
+        font-size: 1.6rem !important;  /* Increased from 1.4rem */
+        line-height: 1.3 !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    #home h2 {
+        font-size: 1.3rem !important;  /* Increased from 1.1rem */
+        margin-bottom: 0.5rem !important;
+    }
+    
+    #home p {
+        font-size: 1rem !important;    /* Increased from 0.85rem */
+        line-height: 1.5 !important;
+        margin: 0.5rem auto !important;
+        max-width: 90% !important;
+    }
+    
+    #home .download-btn {
+        padding: 0.3rem 0.8rem !important;
+        font-size: 0.75rem !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #home .profile-border {
+        width: 85px !important;
+        height: 85px !important;
+    }
+    
+    #home h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    #home h2 {
+        font-size: 1.2rem !important;
+    }
+    
+    #home p {
+        font-size: 0.95rem !important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #home .profile-border {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    #home h1 {
+        font-size: 1.4rem !important;
+    }
+    
+    #home h2 {
+        font-size: 1.1rem !important;
+    }
+    
+    #home p {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #home .profile-border {
+        width: 75px !important;
+        height: 75px !important;
+    }
+    
+    #home h1 {
+        font-size: 1.3rem !important;
+    }
+    
+    #home h2 {
+        font-size: 1rem !important;
+    }
+    
+    #home p {
+        font-size: 0.85rem !important;
+    }
+}
+
+/* Section Headers - with increased specificity */
+section .section-heading,
+section h2.section-heading {
+    font-size: 2.5rem !important;  /* Equivalent to text-4xl */
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    background: linear-gradient(to right, #059669, #10B981) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+    line-height: 1.2 !important;
+}
+
+/* Responsive adjustments for section headings */
+@media screen and (max-width: 768px) {
+    section .section-heading,
+    section h2.section-heading {
+        font-size: 2.0rem !important;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    section .section-heading,
+    section h2.section-heading {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media screen and (max-width: 418px) {
+    section .section-heading,
+    section h2.section-heading {
+        font-size: 1.675rem !important;
+    }
 }
