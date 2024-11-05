@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("7gunyeTjOUckuz2Lu");
+        })();
+    </script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-emerald-600">Neha Singh</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#profiles" class="nav-link">Profiles</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button class="md:hidden" id="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden">
+        <a href="#home" class="block py-2 px-4 text-sm hover:bg-gray-200">Home</a>
+        <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-200">Skills</a>
+        <a href="#education" class="block py-2 px-4 text-sm hover:bg-gray-200">Education</a>
+        <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-200">Projects</a>
+        <a href="#profiles" class="block py-2 px-4 text-sm hover:bg-gray-200">Profiles</a>
+        <a href="#experience" class="block py-2 px-4 text-sm hover:bg-gray-200">Experience</a>
+        <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen relative overflow-hidden bg-gradient-to-br from-emerald-50 to-green-50 flex items-center justify-center">
+        <!-- Decorative circles -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-12 relative z-10 mt-20">
+            <!-- Profile Section -->
+            <div class="md:w-1/3 flex justify-center">
+                <div class="relative inline-block">
+                    <div class="w-72 h-80 rounded-[40%] overflow-hidden border-4 border-emerald-500 shadow-2xl hover:scale-105 transition-transform duration-300 bg-white">
+                        <img src="assets/profile.jpg" 
+                             alt="Neha Singh" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://via.placeholder.com/400?text=NS'">
+                    </div>
+                    <div class="absolute -bottom-2 -right-2 w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center animate-bounce shadow-lg">
+                        <span class="text-white text-2xl">👋</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="md:w-2/3 text-center">
+                <h1 class="text-5xl font-bold mb-4">
+                    Hi, I'm <span class="text-emerald-600">Neha Singh</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">Full Stack Developer | ECE Student</p>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-4 mb-8">
+                    <a href="mailto:neha786.india@gmail.com" class="social-button bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-full flex items-center transition-all duration-300">
+                        <i class="fas fa-envelope mr-2"></i>Email
+                    </a>
+                    <a href="https://github.com/neha13singh" target="_blank" class="social-button bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-full flex items-center transition-all duration-300">
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/neha-singh-a55254220/" target="_blank" class="social-button bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-full flex items-center transition-all duration-300">
+                        <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                    </a>
+                </div>
+
+                <div class="flex justify-center">
+                    <a href="assets/resume.pdf" download class="link-button-large">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 skills-bg">
+        <h2 class="section-heading text-4xl font-bold text-center mb-16">Skills</h2>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Full-Stack Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-layer-group text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Full-Stack Development</h3>
+                    <p class="text-xl text-emerald-600">MERN Stack</p>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Express.js</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                    </div>
+                </div>
+
+                <!-- Frontend Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-code text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Frontend Technologies</h3>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Bootstrap</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Tailwind</span>
+                    </div>
+                </div>
+
+                <!-- Programming Languages Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-laptop-code text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Programming Languages</h3>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">C</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">C++</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Add to Skills Section -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-book text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Relevant Coursework</h3>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">DBMS</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">DSA</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Operating Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 education-bg">
+        <h2 class="section-heading text-4xl font-bold text-center mb-16">Education</h2>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- B.Tech Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-graduation-cap text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">B.Tech in Electronics & Communication</h3>
+                    <p class="text-xl text-emerald-600">Institute of Engineering and Technology, Lucknow</p>
+                    <p class="text-gray-600 mt-2">2025</p>
+                    <div class="mt-4">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">
+                            CGPA: 8.18/10
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Diploma Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-certificate text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Diploma in Electronics & Communication</h3>
+                    <p class="text-xl text-emerald-600">Government Girls Polytechnic, Lucknow</p>
+                    <p class="text-gray-600 mt-2">2022</p>
+                    <div class="mt-4">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">
+                            Percentage: 83.18%
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 12th Grade Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-school text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">12th Grade</h3>
+                    <p class="text-xl text-emerald-600">Punjab School Education Board</p>
+                    <p class="text-gray-600 mt-2">2020</p>
+                    <div class="mt-4">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">
+                            Percentage: 89%
+                        </span>
+                    </div>
+                </div>
+                   <!-- 10th Grade Card -->
+                   <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-school text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">10th Grade</h3>
+                    <p class="text-xl text-emerald-600">Punjab School Education Board</p>
+                    <p class="text-gray-600 mt-2">2018</p>
+                    <div class="mt-4">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">
+                            Percentage: 87%
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 projects-bg">
+        <h2 class="section-heading text-4xl font-bold text-center mb-16">Projects</h2>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- VisionCraft Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-robot text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">VisionCraft</h3>
+                    <p class="text-xl text-emerald-600">AI Image Generation Platform</p>
+                    <p class="text-gray-600 mt-2">Oct 2024 - Nov 2024</p>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">MERN Stack</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">OpenAI</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Cloudinary</span>
+                    </div>
+                    <ul class="feature-list mt-4">
+                        <li>AI-powered image generation using DALL-E API</li>
+                        <li>200+ unique artworks created</li>
+                        <li>Optimized load times under 2 seconds</li>
+                    </ul>
+                    <br>
+                    <a href="https://github.com/neha13singh/VisionCraft_AI_Image_Generator" target="_blank" class="link-button w-full justify-center mt-4">
+                        <i class="fas fa-code mr-2"></i>View Project
+                    </a>
+                </div>
+
+                <!-- Book Show Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-book text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Book Show</h3>
+                    <p class="text-xl text-emerald-600">Virtual Bookstore Platform</p>
+                    <p class="text-gray-600 mt-2">Sep 2024 - Oct 2024</p>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">MERN Stack</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                    </div>
+                    <ul class="feature-list mt-4">
+                        <li>200+ book catalog management</li>
+                        <li>Intuitive navigation system</li>
+                        <li>Responsive design</li>
+                    </ul>
+                    <br>
+                    <a href="https://github.com/neha13singh/Book_Show" target="_blank" class="link-button w-full justify-center mt-4">
+                        <i class="fas fa-code mr-2"></i>View Project
+                    </a>
+                </div>
+
+                <!-- Day Planner Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-calendar text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">React Day Planner</h3>
+                    <p class="text-xl text-emerald-600">AI-Enhanced Weather App</p>
+                    <p class="text-gray-600 mt-2">Aug 2024 - Sep 2024</p>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">OpenWeatherMap</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">OpenAI</span>
+                    </div>
+                    <ul class="feature-list mt-4">
+                        <li>Real-time weather updates</li>
+                        <li>Sub-2 second response time</li>
+                        <li>Adaptive API handling</li>
+                    </ul>
+                    <br>
+                    <a href="https://github.com/neha13singh/AI_Day_Planner/" target="_blank" class="link-button w-full justify-center mt-4">
+                        <i class="fas fa-code mr-2"></i>View Project
+                    </a>
+                </div>
+                <!-- simon game -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-brain text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Simon Memory Game</h3>
+                    <p class="text-xl text-emerald-600">Memory Game</p>
+                    <p class="text-gray-600 mt-2">Jul 2024 - Aug 2024</p>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">HTML, CSS</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                    </div>
+                    <ul class="feature-list mt-4">
+                        <li>Interactive memory sequence challenge</li>
+                        <li>Real-time audio-visual feedback</li>
+                        <li>Progressive difficulty system</li>
+                    </ul>
+                    <br>
+                    <a href="https://neha13singh.github.io/Simon_memory_game/" target="_blank" class="link-button w-full justify-center mt-4">
+                        <i class="fas fa-code mr-2"></i>View Project
+                    </a>
+                </div>
+                <!-- Weather App Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-cloud-sun text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Weather App</h3>
+                    <p class="text-xl text-emerald-600">Real-time Weather Application</p>
+                    <p class="text-gray-600 mt-2">Dec 2023 - Jan 2024</p>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">OpenWeatherMap API</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                    </div>
+                    <ul class="feature-list mt-4">
+                        <li>Real-time weather data integration</li>
+                        <li>City-based weather search</li>
+                        <li>Responsive design implementation</li>
+                    </ul>
+                    <br>
+                    <a href="https://neha13singh.github.io/weather-app/" target="_blank" class="link-button w-full justify-center mt-4">
+                        <i class="fas fa-code mr-2"></i>View Project
+                    </a>
+                </div>
+                <!-- Stone Paper Scissor Game Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-hand-scissors text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Stone Paper Scissor</h3>
+                    <p class="text-xl text-emerald-600">Interactive Game</p>
+                    <p class="text-gray-600 mt-2">Jan 2024 - Feb 2024</p>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                    </div>
+                    <ul class="feature-list mt-4">
+                        <li>Interactive gameplay mechanics</li>
+                        <li>Real-time score tracking</li>
+                        <li>Responsive user interface</li>
+                    </ul>
+                    <br>
+                    <a href="https://neha13singh.github.io/stone_paper_scissor/" target="_blank" class="link-button w-full justify-center mt-4">
+                        <i class="fas fa-code mr-2"></i>View Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coding Profiles Section -->
+    <section id="profiles" class="py-20 profiles-bg">
+        <h2 class="section-heading text-4xl font-bold text-center mb-16">Coding Profiles/Certifications</h2>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- LeetCode Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-bold text-2xl mb-3 text-emerald-800">LeetCode</h3>
+                    <p class="text-gray-600 mb-4">300+ DSA questions solved</p>
+                    <a href="https://leetcode.com/Nehasingh1328" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Profile
+                    </a>
+                </div>
+                 <!-- codeforces-->
+                 <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-bold text-2xl mb-3 text-emerald-800">Codeforces</h3>
+                    <p class="text-gray-600 mb-4">Solved more than 100 problems</p>
+                    <a href="https://codeforces.com/profile/Neha132931" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Profile
+                    </a>
+                </div>
+                <!-- GeeksforGeeks Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-bold text-2xl mb-3 text-emerald-800">GeeksforGeeks</h3>
+                    <p class="text-gray-600 mb-4">Rank 245, 150+ DSA questions</p>
+                    <a href="https://auth.geeksforgeeks.org/user/Nehasingh134202" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Profile
+                    </a>
+                </div>
+
+                <!-- CodeChef Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-bold text-2xl mb-3 text-emerald-800">CodeChef</h3>
+                    <p class="text-gray-600 mb-4">2-star coder</p>
+                    <a href="https://www.codechef.com/users/neha_singh_13" target="_blank" class="link-button">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Profile
+                    </a>
+                </div>
+
+                <!-- Embedded Training Certificate -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-bold text-2xl mb-3 text-emerald-800">Embedded Training</h3>
+                    <p class="text-gray-600 mb-4">PNS Automation, 2023</p>
+                    <a href="https://drive.google.com/file/d/1Oek1sI9mBrE_SvCCe8uWdcGRqRzw6LBk/view?usp=sharing" target="_blank" class="link-button">
+                        <i class="fas fa-certificate mr-2"></i>View Certificate
+                    </a>
+                </div>
+
+                <!-- MATLAB Certificate -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-bold text-2xl mb-3 text-emerald-800">MATLAB Course</h3>
+                    <p class="text-gray-600 mb-4">Internshala Trainings, 2023</p>
+                    <a href="https://drive.google.com/file/d/1amybkYHchp8afQv-Fit_SmhANixqFPPJ/view?usp=sharing" target="_blank" class="link-button">
+                        <i class="fas fa-certificate mr-2"></i>View Certificate
+                    </a>
+                </div>
+
+                <!-- Python Certificate -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-bold text-2xl mb-3 text-emerald-800">Python Course</h3>
+                    <p class="text-gray-600 mb-4">GUVI, 2024</p>
+                    <a href="https://drive.google.com/file/d/1M6k3VGxGRkfplKkxpkHd6mJwollJmVkM/view?usp=sharing" target="_blank" class="link-button">
+                        <i class="fas fa-certificate mr-2"></i>View Certificate
+                    </a>
+                </div>
+
+                <!-- AI Face Recognition Certificate -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-bold text-2xl mb-3 text-emerald-800">AI Face Recognition</h3>
+                    <p class="text-gray-600 mb-4">GUVI, 2022</p>
+                    <a href="https://drive.google.com/file/d/1CIexnyl_0YCSdsoFefxytH9dClk8vkOc/view?usp=sharing" target="_blank" class="link-button">
+                        <i class="fas fa-certificate mr-2"></i>View Certificate
+                    </a>
+                </div>
+
+                <!-- Parmarth Volunteer Certificate -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <h3 class="font-bold text-2xl mb-3 text-emerald-800">Volunteer Certificate</h3>
+                    <p class="text-gray-600 mb-4">IET Lucknow, 2022</p>
+                    <a href="https://drive.google.com/file/d/1-8lOoZkfkwamELZjU-CkIo65VruijYGn/view?usp=sharing" target="_blank" class="link-button">
+                        <i class="fas fa-certificate mr-2"></i>View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 experience-bg">
+        <h2 class="section-heading text-4xl font-bold text-center mb-16">Experience</h2>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- SDE Intern Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-laptop-code text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Software Development Intern</h3>
+                    <p class="text-xl text-emerald-600">Strivers A2Z DSA Course</p>
+                    <p class="text-gray-600 mt-2">Jan 2023 - Present</p>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">
+                            Interactive Coding Platform
+                        </span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">
+                            Real-time Code Compilation
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Trainee Card -->
+                <div class="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                    <div class="card-icon mb-4">
+                        <i class="fas fa-microchip text-3xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-2">Trainee</h3>
+                    <p class="text-xl text-emerald-600">Softpro India</p>
+                    <p class="text-gray-600 mt-2">Sep 2022 - Dec 2022</p>
+                    <div class="mt-4 space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">
+                            Embedded Systems
+                        </span>
+                        <span class="inline-block bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">
+                            Proteus Simulations
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 contact-bg">
+        <h2 class="section-heading text-4xl font-bold text-center mb-16">Contact Me</h2>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-lg mx-auto glass-card p-8">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label class="block text-emerald-800 font-medium mb-2">Name</label>
+                        <input type="text" 
+                               name="user_name"
+                               required
+                               class="w-full px-4 py-3 rounded-lg border border-emerald-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all duration-200">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" 
+                               name="user_email"
+                               required
+                               class="w-full px-4 py-2 rounded-lg border">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Message</label>
+                        <textarea name="message"
+                                  required
+                                  class="w-full px-4 py-2 rounded-lg border h-32"></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-emerald-600 to-green-500 text-white py-3 rounded-lg hover:shadow-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/neha-singh-a55254220/" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/neha13singh" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2024 Neha Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
